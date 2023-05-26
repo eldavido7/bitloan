@@ -22,26 +22,26 @@ export default function Contact() {
 
                         <div className="col-md-6">
                             <form action="">
-                                <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">
+                                <div className="mb-3">
+                                    <label for="exampleFormControlInput1" className="form-label">
                                         Full Name</label>
-                                    <input type="text" class="form-control" id="name" placeholder="John Doe" />
+                                    <input type="text" className="form-control" id="name" placeholder="John Doe" />
                                 </div>
 
-                                <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" />
+                                <div className="mb-3">
+                                    <label for="exampleFormControlInput1" className="form-label">Email address</label>
+                                    <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="name@example.com" />
                                 </div>
 
-                                <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Phone Number</label>
-                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="+1 234 567890" />
+                                <div className="mb-3">
+                                    <label for="exampleFormControlInput1" className="form-label">Phone Number</label>
+                                    <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="+1 234 567890" />
                                 </div>
 
-                                <div class="mb-3">
-                                    <label for="exampleFormControlTextarea1" class="form-label">
+                                <div className="mb-3">
+                                    <label for="exampleFormControlTextarea1" className="form-label">
                                         Message</label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                                    <textarea className="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
                                 </div>
                                 <button type="submit" className='btn btn-outline-primary rounded-pill px-4'>Submit <i className="fa fa-paper-plane ms-2 "></i></button>
                             </form>

@@ -17,12 +17,12 @@ export default function Services() {
 
                     <div className="row mt-5">
                         <div className="col-md-4">
-                            <div class="card p-3 ">
-                                <div class="card-body text-center">
+                            <div className="card p-3 ">
+                                <div className="card-body text-center">
                                     <i className="fa fa-money fa-4x mb-4 text-primary"></i>
-                                    <h5 class="card-title mb-3 fs-4 fw-bold">Highly Profitable
+                                    <h5 className="card-title mb-3 fs-4 fw-bold">Highly Profitable
                                     </h5>
-                                    <p class="card-text lead">Some quick example text to build on the card 
+                                    <p className="card-text lead">Some quick example text to build on the card 
                                         title and make up the bulk of the card's content.
                                     </p>
                                     
@@ -31,12 +31,12 @@ export default function Services() {
                         </div>
 
                         <div className="col-md-4">
-                            <div class="card p-3 ">
-                                <div class="card-body text-center">
+                            <div className="card p-3 ">
+                                <div className="card-body text-center">
                                     <i className="fa fa-dollar fa-4x mb-4 text-primary"></i>
-                                    <h5 class="card-title mb-3 fs-4 fw-bold">Best in the Market
+                                    <h5 className="card-title mb-3 fs-4 fw-bold">Best in the Market
                                     </h5>
-                                    <p class="card-text lead">Some quick example text to build on the card 
+                                    <p className="card-text lead">Some quick example text to build on the card 
                                         title and make up the bulk of the card's content.
                                     </p>
                                     
@@ -45,12 +45,12 @@ export default function Services() {
                         </div>
 
                         <div className="col-md-4">
-                            <div class="card p-3 ">
-                                <div class="card-body text-center">
+                            <div className="card p-3 ">
+                                <div className="card-body text-center">
                                     <i className="fa fa-btc fa-4x mb-4 text-primary"></i>
-                                    <h5 class="card-title mb-3 fs-4 fw-bold">Lend Bitcoin
+                                    <h5 className="card-title mb-3 fs-4 fw-bold">Lend Bitcoin
                                     </h5>
-                                    <p class="card-text lead">Some quick example text to build on the card 
+                                    <p className="card-text lead">Some quick example text to build on the card 
                                         title and make up the bulk of the card's content.
                                     </p>
                                     
@@ -62,12 +62,12 @@ export default function Services() {
 
                     <div className="row mt-5">
                         <div className="col-md-4">
-                            <div class="card p-3 ">
-                                <div class="card-body text-center">
+                            <div className="card p-3 ">
+                                <div className="card-body text-center">
                                     <i className="fa fa-bank fa-4x mb-4 text-primary"></i>
-                                    <h5 class="card-title mb-3 fs-4 fw-bold">Borrow
+                                    <h5 className="card-title mb-3 fs-4 fw-bold">Borrow
                                     </h5>
-                                    <p class="card-text lead">Some quick example text to build on the card 
+                                    <p className="card-text lead">Some quick example text to build on the card 
                                         title and make up the bulk of the card's content.
                                     </p>
                                     
@@ -76,12 +76,12 @@ export default function Services() {
                         </div>
 
                         <div className="col-md-4">
-                            <div class="card p-3 ">
-                                <div class="card-body text-center">
+                            <div className="card p-3 ">
+                                <div className="card-body text-center">
                                     <i className="fa fa-percent fa-4x mb-4 text-primary"></i>
-                                    <h5 class="card-title mb-3 fs-4 fw-bold">Deposit
+                                    <h5 className="card-title mb-3 fs-4 fw-bold">Deposit
                                     </h5>
-                                    <p class="card-text lead">Some quick example text to build on the card 
+                                    <p className="card-text lead">Some quick example text to build on the card 
                                         title and make up the bulk of the card's content.
                                     </p>
                                     
@@ -90,12 +90,12 @@ export default function Services() {
                         </div>
 
                         <div className="col-md-4">
-                            <div class="card p-3 ">
-                                <div class="card-body text-center">
+                            <div className="card p-3 ">
+                                <div className="card-body text-center">
                                     <i className="fa fa-credit-card fa-4x mb-4 text-primary"></i>
-                                    <h5 class="card-title mb-3 fs-4 fw-bold">Withdraw
+                                    <h5 className="card-title mb-3 fs-4 fw-bold">Withdraw
                                     </h5>
-                                    <p class="card-text lead">Some quick example text to build on the card 
+                                    <p className="card-text lead">Some quick example text to build on the card 
                                         title and make up the bulk of the card's content.
                                     </p>
                                     

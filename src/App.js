@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
@@ -13,11 +12,13 @@ import How from './components/How';
 import Borrow from './components/Borrow';
 import Lend from './components/Lend';
 import { Route, Switch } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom/cjs/react-router-dom';
 
 function App() {
   return (
     <>
       <Navbar/>
+      <BrowserRouter>
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/about" component={About} />
@@ -30,6 +31,7 @@ function App() {
         <Route exact path="/borrow" component={Borrow} />
         <Route exact path="/lend" component={Lend} />
       </Switch>
+      </BrowserRouter>
       <Footer/>
     </>
   );

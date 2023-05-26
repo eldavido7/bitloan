@@ -1,12 +1,9 @@
 import React from 'react'
 import {
-    MDBBtn,
     MDBCol,
     MDBContainer,
     MDBIcon,
-    MDBInput,
     MDBRow,
-    MDBTextArea,
     MDBTypography,
 } from "mdb-react-ui-kit";
 

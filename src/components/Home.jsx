@@ -45,12 +45,12 @@ export default function Home() {
 
                     <div className="row mt-5">
                         <div className="col-md-4">
-                            <div class="card p-3 h-100">
-                                <div class="card-body text-center">
+                            <div className="card p-3 h-100">
+                                <div className="card-body text-center">
                                     <i className="fa fa-money fa-4x mb-4 text-primary"></i>
-                                    <h5 class="card-title mb-3 fs-4 fw-bold">Industry-Leading Returns
+                                    <h5 className="card-title mb-3 fs-4 fw-bold">Industry-Leading Returns
                                     </h5>
-                                    <p class="card-text lead">As a lender, you can enjoy attractive returns on your 
+                                    <p className="card-text lead">As a lender, you can enjoy attractive returns on your 
                                     Bitcoin investment. Our interest rates are above 15%, allowing us to offer you 
                                     competitive returns of 14% per annum. We strive to provide industry-leading returns 
                                     while prioritizing the profitability of our lenders.
@@ -61,12 +61,12 @@ export default function Home() {
                         </div>
 
                         <div className="col-md-4">
-                            <div class="card p-3 h-100">
-                                <div class="card-body text-center">
+                            <div className="card p-3 h-100">
+                                <div className="card-body text-center">
                                     <i className="fa fa-list-alt fa-4x mb-4 text-primary"></i>
-                                    <h5 class="card-title mb-3 fs-4 fw-bold">Flexible Terms and Conditions
+                                    <h5 className="card-title mb-3 fs-4 fw-bold">Flexible Terms and Conditions
                                     </h5>
-                                    <p class="card-text lead">Unlike automated crypto lending platforms, our terms and 
+                                    <p className="card-text lead">Unlike automated crypto lending platforms, our terms and 
                                     conditions are set by the company and frequently updated based on community feedback. 
                                     This flexibility allows us to adapt and meet the evolving needs of our clients. We take 
                                     community response seriously and value the input of our users.
@@ -77,12 +77,12 @@ export default function Home() {
                         </div>
 
                         <div className="col-md-4">
-                            <div class="card p-3 h-100">
-                                <div class="card-body text-center">
+                            <div className="card p-3 h-100">
+                                <div className="card-body text-center">
                                     <i className="fa fa-user-secret fa-4x mb-4 text-primary"></i>
-                                    <h5 class="card-title mb-3 fs-4 fw-bold">Privacy and Security
+                                    <h5 className="card-title mb-3 fs-4 fw-bold">Privacy and Security
                                     </h5>
-                                    <p class="card-text lead">We prioritize the privacy and security of our clients. Our platform operates 
+                                    <p className="card-text lead">We prioritize the privacy and security of our clients. Our platform operates 
                                     fully online, and user data is highly encrypted to provide the highest level of privacy. Our anonymous 
                                     wallet system ensures that your transactions remain private and secure. Additionally, we operate out of 
                                     a tax haven jurisdiction, further enhancing privacy and minimizing regulatory obligations.
@@ -96,12 +96,12 @@ export default function Home() {
 
                     <div className="row mt-5">
                         <div className="col-md-4">
-                            <div class="card p-3 h-100">
-                                <div class="card-body text-center">
+                            <div className="card p-3 h-100">
+                                <div className="card-body text-center">
                                     <i className="fa fa-globe fa-4x mb-4 text-primary"></i>
-                                    <h5 class="card-title mb-3 fs-4 fw-bold">Global Accessibility
+                                    <h5 className="card-title mb-3 fs-4 fw-bold">Global Accessibility
                                     </h5>
-                                    <p class="card-text lead">Bitloanscapital operates fully online, eliminating the need for physical 
+                                    <p className="card-text lead">Bitloanscapital operates fully online, eliminating the need for physical 
                                     operations. This allows us to serve clients globally, providing access to our services from anywhere 
                                     in the world. Wherever you are in the the world, you can participate in the future of decentralized 
                                     finance.
@@ -112,12 +112,12 @@ export default function Home() {
                         </div>
 
                         <div className="col-md-4">
-                            <div class="card p-3 h-100">
-                                <div class="card-body text-center">
+                            <div className="card p-3 h-100">
+                                <div className="card-body text-center">
                                     <i className="fa fa-shield fa-4x mb-4 text-primary"></i>
-                                    <h5 class="card-title mb-3 fs-4 fw-bold">Secure and User-Friendly Platform
+                                    <h5 className="card-title mb-3 fs-4 fw-bold">Secure and User-Friendly Platform
                                     </h5>
-                                    <p class="card-text lead">Our user-friendly platform makes the loan application process 
+                                    <p className="card-text lead">Our user-friendly platform makes the loan application process 
                                     simple and hassle-free. With just a few clicks, you can create an account, deposit your 
                                     Bitcoin, and choose whether to lend or borrow. Our secure Bitcoin wallet ensures that your 
                                     funds are protected, and our platform operates fully online, providing convenience and accessibility.
@@ -151,12 +151,12 @@ export default function Home() {
 
                     <div className="row mt-5">
                         <div className="col-md-4">
-                            <div class="card p-3 h-100">
-                                <div class="card-body text-center">
+                            <div className="card p-3 h-100">
+                                <div className="card-body text-center">
                                     <i className="fa fa-money fa-4x mb-4 text-primary"></i>
-                                    <h5 class="card-title mb-3 fs-4 fw-bold">Medical Loans
+                                    <h5 className="card-title mb-3 fs-4 fw-bold">Medical Loans
                                     </h5>
-                                    <p class="card-text lead">Financial assistance for medical treatments, procedures, or healthcare-related expenses.
+                                    <p className="card-text lead">Financial assistance for medical treatments, procedures, or healthcare-related expenses.
                                     </p>
                                     
                                 </div>
@@ -164,12 +164,12 @@ export default function Home() {
                         </div>
 
                         <div className="col-md-4">
-                            <div class="card p-3 h-100">
-                                <div class="card-body text-center">
+                            <div className="card p-3 h-100">
+                                <div className="card-body text-center">
                                     <i className="fa fa-dollar fa-4x mb-4 text-primary"></i>
-                                    <h5 class="card-title mb-3 fs-4 fw-bold">Student Loans
+                                    <h5 className="card-title mb-3 fs-4 fw-bold">Student Loans
                                     </h5>
-                                    <p class="card-text lead">Funding for educational expenses to support your academic journey.
+                                    <p className="card-text lead">Funding for educational expenses to support your academic journey.
                                     </p>
                                     
                                 </div>
@@ -177,12 +177,12 @@ export default function Home() {
                         </div>
 
                         <div className="col-md-4">
-                            <div class="card p-3 h-100">
-                                <div class="card-body text-center">
+                            <div className="card p-3 h-100">
+                                <div className="card-body text-center">
                                     <i className="fa fa-btc fa-4x mb-4 text-primary"></i>
-                                    <h5 class="card-title mb-3 fs-4 fw-bold">Mortgage Loans
+                                    <h5 className="card-title mb-3 fs-4 fw-bold">Mortgage Loans
                                     </h5>
-                                    <p class="card-text lead">Loans specifically designed for homebuyers or homeowners looking to refinance.
+                                    <p className="card-text lead">Loans specifically designed for homebuyers or homeowners looking to refinance.
                                     </p>
                                     
                                 </div>
@@ -193,12 +193,12 @@ export default function Home() {
 
                     <div className="row mt-5">
                         <div className="col-md-4">
-                            <div class="card p-3 h-100">
-                                <div class="card-body text-center">
+                            <div className="card p-3 h-100">
+                                <div className="card-body text-center">
                                     <i className="fa fa-bank fa-4x mb-4 text-primary"></i>
-                                    <h5 class="card-title mb-3 fs-4 fw-bold">Standard Loans
+                                    <h5 className="card-title mb-3 fs-4 fw-bold">Standard Loans
                                     </h5>
-                                    <p class="card-text lead">General-purpose loans for various personal or business needs.
+                                    <p className="card-text lead">General-purpose loans for various personal or business needs.
                                     </p>
                                     
                                 </div>
