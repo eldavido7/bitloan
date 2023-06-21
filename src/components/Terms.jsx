@@ -8,6 +8,7 @@ export default function Terms() {
 
         <div>
             <MDBContainer>
+                <br></br>
                 <p>Last updated <span style={{ color: '#8351f9' }}>[05/23/2023]</span></p>
                 <p><strong>AGREEMENT TO TERMS</strong></p>
                 <p>

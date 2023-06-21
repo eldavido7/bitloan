@@ -8,6 +8,7 @@ export default function Policy() {
         <div>
             <MDBContainer>
                 <div>
+                    <br></br>
                     <h2>PRIVACY NOTICE</h2>
                     <p>Last updated <span style={{ color: '#8351f9' }}>[05/23/2023]</span></p>
                     <p>

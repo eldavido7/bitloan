@@ -2,17 +2,24 @@
 
 #home{
     background: #07425b;
-    background: linear-gradient(90deg, #07425b 50%, #065f85 100%);
+    background: linear-gradient(90deg, #07425b 40%, #021924 100%);
     min-height: 500px;
-    font-family: Garamond;
+    font-family: Garamond, serif;
+}
+
+#end{
+    background: #07425b;
+    background: linear-gradient(90deg, #07425b 40%, #021924 100%);
+    min-height: 500px;
+    font-family: Garamond, serif;
 }
 
 .navbar{
-    font-family: Garamond;
+    font-family: Garamond, serif;
 }
 
 .container{
-    font-family: Garamond;
+    font-family: Garamond, serif;
 }
 
 /* Cards */
@@ -40,7 +47,7 @@
 
 /* Footer */
 footer{
-    background: rgb(9, 66, 91) !important;
-    background: linear-gradient(90deg, rgb(9, 66, 91) 40%, rgba(6, 117, 165, 0) 100%) !important;
-    font-family: Garamond;
+    background: rgb(6, 52, 72) !important;
+    background: linear-gradient(90deg, rgb(9, 66, 91) 40%, #021924 100%) !important;
+    font-family: Garamond, serif;
 }

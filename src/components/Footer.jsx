@@ -8,27 +8,30 @@ export default function Footer() {
                 <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
                     
                     <div className="me-5 d-none d-lg-block">
-                        <span>Get connected with us on social networks:</span>
+                        <span>Get connected with us on our social networks:</span>
                     </div>
 
                     <div>
-                        <a href="" className="me-4 text-reset">
+                        <a href="https://web.facebook.com/profile.php?id=100093215115161" className="me-4 text-reset">
                             <i className="fa fa-facebook-f"></i>
                         </a>
-                        <a href="" className="me-4 text-reset">
+                        <a href="https://twitter.com/Bitloanscapital" className="me-4 text-reset">
                             <i className="fa fa-twitter"></i>
                         </a>
-                        <a href="" className="me-4 text-reset">
-                            <i className="fa fa-google"></i>
+                        <a href="https://www.pinterest.com/BitloansCapital/" className="me-4 text-reset">
+                            <i className="fa fa-pinterest"></i>
                         </a>
-                        <a href="" className="me-4 text-reset">
+                        <a href="https://www.instagram.com/bitloanscapital/" className="me-4 text-reset">
                             <i className="fa fa-instagram"></i>
                         </a>
-                        <a href="" className="me-4 text-reset">
+                        <a href="https://www.linkedin.com/in/bitloans-capital-627121279/" className="me-4 text-reset">
                             <i className="fa fa-linkedin"></i>
                         </a>
-                        <a href="" className="me-4 text-reset">
-                            <i className="fa fa-github"></i>
+                        <a href="https://www.reddit.com/user/BitloansCapital" className="me-4 text-reset">
+                            <i className="fa fa-reddit"></i>
+                        </a>
+                        <a href="https://join.skype.com/invite/CKOdCbBYl2tj" className="me-4 text-reset">
+                            <i class="fa fa-skype"></i>
                         </a>
                     </div>
                  
@@ -104,7 +107,7 @@ export default function Footer() {
                                     <i className="fa fa-envelope me-3"></i>
                                     support@bitloanscapital.com
                                 </p>
-                                <p><i className="fa fa-phone me-3"></i> +1 (206) 965-9214</p>
+                                <p><i className="fa fa-phone me-3"></i> +1 (928) 328-8764</p>
                             </div>
                             
                         </div>
@@ -113,8 +116,8 @@ export default function Footer() {
                 </section>
                 
                 <div className="text-center p-4">
-                    © 2023 Copyright:
-                    <a className="text-reset fw-bold" href="https://bitloanscapital.com/">Bitloans Capital</a>
+                    © 2023 Bitloanscapital. All rights reserved. 
+                    <a className="text-reset fw-bold" href="https://bitloanscapital.com/">Bitloanscapital</a>
                 </div>
             </footer>
         </div>

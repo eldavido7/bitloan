@@ -9,7 +9,9 @@ export default function About() {
                     <div className="row">
                         <div className="col-md-6">
                             <img src="/assets/about1.jpg" alt="About"
-                                className="w-75 mt-5 rounded" />
+                                className="w-100 mt-5 rounded" />
+<br></br>
+<br></br>
                         </div>
 
                         <div className="col-md-6">
@@ -22,10 +24,10 @@ export default function About() {
                                 contributed to the widespread adoption of Bitcoin, we have dedicated ourselves to
                                 building robust infrastructure and securing funding to ensure a seamless experience
                                 for our users. With our state-of-the-art platform, we aim to revolutionize the lending
-                                industry and empower individuals to make the most of their Bitcoin holdings. </p>
+                                industry and empower individuals to make the most of their Bitcoin holdings. Do you want 
+                                to meet our <a href='/team'>team</a>? </p>
                             
                         </div>
-
                         {/* Our vision*/}
 
                         <div className="col-md-6">
@@ -51,7 +53,7 @@ export default function About() {
 
                             <div className="col-md-6">
                                 <img src="/assets/privacy.jpg" alt="About"
-                                    className="w-75 mt-5 rounded" />
+                                    className="w-100 mt-5 rounded" />
                             </div>
 
                             <div className="col-md-6">
@@ -91,7 +93,7 @@ export default function About() {
 
                         <div className="col-md-6">
                             <img src="/assets/return.jpg" alt="About"
-                                className="w-75 mt-5 rounded" />
+                                className="w-100 mt-5 rounded" />
                                 <br></br>
                                 <br></br>
                                 <br></br>
@@ -134,7 +136,7 @@ export default function About() {
 
                         <div className="col-md-6">
                             <img src="/assets/comm.jpg" alt="About"
-                                className="w-75 mt-5 rounded" />
+                                className="w-100 mt-5 rounded" />
                                 <br></br>
                                 <br></br>
                                 <br></br>
@@ -175,7 +177,7 @@ export default function About() {
 
                         <div className="col-md-6">
                             <img src="/assets/support.jpg" alt="About"
-                                className="w-75 mt-5 rounded" />
+                                className="w-100 mt-5 rounded" />
                                 <br></br>
                                 <br></br>
                                 <br></br>
@@ -211,7 +213,7 @@ export default function About() {
                             Get Started
                         </button>
                         <button className="btn btn-outline-primary rounded-pill py-2 ms-2">
-                            Request Callback
+                            Contact Us
                         </button>
                     </div>
                     
