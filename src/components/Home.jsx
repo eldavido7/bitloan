@@ -349,6 +349,7 @@ export default function Home() {
                         </div>
 
                         <div className="col-md-4">
+                        <a href='/borrow' style={{ textDecoration: 'none' }}>
                             <div className="card p-3 h-100">
                                 <div className="card-body text-center">
                                     <i className="fa fa-dollar fa-4x mb-4" style={{ color: '#07425b' }}></i>
@@ -356,12 +357,13 @@ export default function Home() {
                                     </h5>
                                     <p className="card-text lead" style={{ textAlign: 'justify' }}>Funding for educational expenses to support your academic journey.
                                     </p>
-
                                 </div>
                             </div>
+                            </a>
                         </div>
 
                         <div className="col-md-4">
+                        <a href='/mortgage' style={{ textDecoration: 'none' }}>
                             <div className="card p-3 h-100">
                                 <div className="card-body text-center">
                                     <i className="fa fa-btc fa-4x mb-4" style={{ color: '#07425b' }}></i>
@@ -369,15 +371,16 @@ export default function Home() {
                                     </h5>
                                     <p className="card-text lead" style={{ textAlign: 'left' }}>Loans specifically designed for homebuyers or homeowners looking to refinance.
                                     </p>
-
                                 </div>
                             </div>
+                            </a>
                         </div>
 
                     </div>
 
                     <div className="row mt-5" style={{ margin: '100px', marginTop: '0', marginBottom: '0' }}>
                         <div className="col-md-4">
+                        <a href='/standard' style={{ textDecoration: 'none' }}>
                             <div className="card p-3 h-100">
                                 <div className="card-body text-center">
                                     <i className="fa fa-bank fa-4x mb-4" style={{ color: '#07425b' }}></i>
@@ -388,8 +391,8 @@ export default function Home() {
 
                                 </div>
                             </div>
+                            </a>
                         </div>
-
                     </div>
 
                 </div>
