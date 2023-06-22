@@ -1,6 +1,16 @@
-import React from 'react'
+import * as React from 'react';
+import Grid from '@mui/material/Grid';
+import FormLabel from '@mui/material/FormLabel';
+import FormControl from '@mui/material/FormControl';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import { Typography } from '@mui/material';
+import RadioGroup from '@mui/material/RadioGroup';
+import Radio from '@mui/material/Radio';
+import Paper from '@mui/material/Paper';
+
 
 export default function Home() {
+
     return (
         <div>
             <section id="home">
@@ -40,160 +50,118 @@ export default function Home() {
             <section id='added1'>
                 <div className="container my-5 py-5"
                     style={{
-                        display: 'flex',
-                        flexDirection: 'row',
-                        justifyContent: 'center',
-                        alignItems: 'center',
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+                        gap: '1rem',
                         background: 'linear-gradient(to right, #fbfbfb, #ededed)',
-                        height: 'max(30vh, 10rem) 15rem',
+                        minHeight: '30vh',
                         width: '100%',
-                        padding: 'max(3vh, 1rem) 1.5rem',
+                        padding: '3vh 1.5rem',
                         boxSizing: 'border-box',
                         fontFamily: 'Garamond, serif',
+                        textAlign: 'center',
                     }}
                 >
-                    <div className="row"
-                        style={{
-                            flex: 1,
-                            display: 'flex',
-                            flexDirection: 'column',
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            borderRight: '0.1vw solid black',
-                            textAlign: 'center',
-                        }}
-                    >
-                        <div className="col-md-6">
-
-                            <div
-                                style={{
-                                    fontSize: '1.2vw', // 1.2% of the viewport width
-                                    fontWeight: 'bold',
-                                    color: '#07425b',
-                                    marginBottom: '1vh', // 1% of the viewport height
-                                    letterSpacing: '0.15vh', // 0.15% of the viewport height
-                                }}
-                            >
-                                About
-                            </div>
-                            <div
-                                style={{
-                                    fontSize: '3vw', // 3% of the viewport width
-                                    fontWeight: 'bold',
-                                    color: '#07425b',
-                                    letterSpacing: '0.15vh', // 0.15% of the viewport height
-                                }}
-                            >
-                                3500 BTC
-                            </div>
-                            <div
-                                style={{
-                                    fontSize: '1.2vw', // 1.2% of the viewport width
-                                    fontWeight: 'normal',
-                                    color: '#07425b',
-                                    letterSpacing: '0.15vh', // 0.15% of the viewport height
-                                }}
-                            >
-                                paid out to lenders
-                            </div>
+                    <div className="item">
+                        <div
+                            style={{
+                                fontSize: '1.2vw',
+                                fontWeight: 'bold',
+                                color: '#07425b',
+                                marginBottom: '1vh',
+                                letterSpacing: '0.15vh',
+                            }}
+                        >
+                            About
                         </div>
-
+                        <div
+                            style={{
+                                fontSize: '3vw',
+                                fontWeight: 'bold',
+                                color: '#07425b',
+                                letterSpacing: '0.15vh',
+                            }}
+                        >
+                            3500 BTC
+                        </div>
+                        <div
+                            style={{
+                                fontSize: '1.2vw',
+                                fontWeight: 'normal',
+                                color: '#07425b',
+                                letterSpacing: '0.15vh',
+                            }}
+                        >
+                            paid out to lenders
+                        </div>
                     </div>
 
-                    <div className="row"
-                        style={{
-                            flex: 1,
-                            display: 'flex',
-                            flexDirection: 'column',
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            borderRight: '0.1vw solid black',
-                            textAlign: 'center',
-                        }}
-                    >
-                        <div className="col-md-6">
-
-                            <div
-                                style={{
-                                    fontSize: '1.2vw', // 1.2% of the viewport width
-                                    fontWeight: 'bold',
-                                    color: '#07425b',
-                                    marginBottom: '1vh', // 1% of the viewport height
-                                    letterSpacing: '0.15vh', // 0.15% of the viewport height
-                                }}
-                            >
-                                About
-                            </div>
-                            <div
-                                style={{
-                                    fontSize: '3vw', // 3% of the viewport width
-                                    fontWeight: 'bold',
-                                    color: '#07425b',
-                                    letterSpacing: '0.15vh', // 0.15% of the viewport height
-                                }}
-                            >
-                                $600 Million
-                            </div>
-                            <div
-                                style={{
-                                    fontSize: '1.2vw', // 1.2% of the viewport width
-                                    fontWeight: 'normal',
-                                    color: '#07425b',
-                                    letterSpacing: '0.15vh', // 0.15% of the viewport height
-                                }}
-                            >
-                                Handled
-                            </div>
+                    <div className="item">
+                        <div
+                            style={{
+                                fontSize: '1.2vw',
+                                fontWeight: 'bold',
+                                color: '#07425b',
+                                marginBottom: '1vh',
+                                letterSpacing: '0.15vh',
+                            }}
+                        >
+                            About
                         </div>
-
+                        <div
+                            style={{
+                                fontSize: '3vw',
+                                fontWeight: 'bold',
+                                color: '#07425b',
+                                letterSpacing: '0.15vh',
+                            }}
+                        >
+                            $600 Million
+                        </div>
+                        <div
+                            style={{
+                                fontSize: '1.2vw',
+                                fontWeight: 'normal',
+                                color: '#07425b',
+                                letterSpacing: '0.15vh',
+                            }}
+                        >
+                            Handled
+                        </div>
                     </div>
 
-                    <div className="row"
-                        style={{
-                            flex: 1,
-                            display: 'flex',
-                            flexDirection: 'column',
-                            justifyContent: 'center',
-                            alignItems: 'center',
-
-                            textAlign: 'center',
-                        }}
-                    >
-                        <div className="col-md-6">
-
-                            <div
-                                style={{
-                                    fontSize: '1.2vw', // 1.2% of the viewport width
-                                    fontWeight: 'bold',
-                                    color: '#07425b',
-                                    marginBottom: '1vh', // 1% of the viewport height
-                                    letterSpacing: '0.15vh', // 0.15% of the viewport height
-                                }}
-                            >
-                                About
-                            </div>
-                            <div
-                                style={{
-                                    fontSize: '3vw', // 3% of the viewport width
-                                    fontWeight: 'bold',
-                                    color: '#07425b',
-                                    letterSpacing: '0.15vh', // 0.15% of the viewport height
-                                }}
-                            >
-                                $4 Million
-                            </div>
-                            <div
-                                style={{
-                                    fontSize: '1.2vw', // 1.2% of the viewport width
-                                    fontWeight: 'normal',
-                                    color: '#07425b',
-                                    letterSpacing: '0.15vh', // 0.15% of the viewport height
-                                }}
-                            >
-                                Loaned a Day
-                            </div>
+                    <div className="item">
+                        <div
+                            style={{
+                                fontSize: '1.2vw',
+                                fontWeight: 'bold',
+                                color: '#07425b',
+                                marginBottom: '1vh',
+                                letterSpacing: '0.15vh',
+                            }}
+                        >
+                            About
                         </div>
-
+                        <div
+                            style={{
+                                fontSize: '3vw',
+                                fontWeight: 'bold',
+                                color: '#07425b',
+                                letterSpacing: '0.15vh',
+                            }}
+                        >
+                            $4 Million
+                        </div>
+                        <div
+                            style={{
+                                fontSize: '1.2vw',
+                                fontWeight: 'normal',
+                                color: '#07425b',
+                                letterSpacing: '0.15vh',
+                            }}
+                        >
+                            Loaned a Day
+                        </div>
                     </div>
                 </div>
             </section>
@@ -227,17 +195,6 @@ export default function Home() {
                         </div>
 
                         <div className="col-md-6">
-                            <div style={{ flex: 1, paddingLeft: '2vw' }}>
-                                <ul style={{ fontSize: '1.5vw', lineHeight: 1.1 }}>
-                                    <li style={{ marginBottom: '1vw', textAlign: 'justify' }}>Flexible Loan Categories: Choose from a diverse range of loan categories tailored to meet your specific financial needs, including student loans, medical loans, mortgage loans, and standard loans.</li>
-                                    <li style={{ marginBottom: '1vw', textAlign: 'justify' }}>Streamlined Application Process: Enjoy a straightforward and hassle-free borrowing experience with our user-friendly application process, allowing you to submit your loan application quickly and easily.</li>
-                                    <li style={{ marginBottom: '1vw', textAlign: 'justify' }}>Competitive Interest Rates: Benefit from competitive interest rates tailored to each loan category, ensuring you can access funding at affordable rates.</li>
-                                    <li style={{ marginBottom: '1vw', textAlign: 'justify' }}>Dedicated Customer Support: Receive personalized assistance throughout your borrowing journey from our experienced customer support team, who are available to address any questions or concerns you may have.</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div className="col-md-6">
                             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'white', fontFamily: 'Garamond, serif', color: '#07425b', padding: '3vw', boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)' }}>
                                 <div style={{ flex: 1, textAlign: 'center' }}>
                                     <h2 style={{ fontSize: '2.5vw', marginBottom: '0.5vw' }}>Loan rates from as low as</h2>
@@ -249,6 +206,18 @@ export default function Home() {
                             <br></br>
                             <br></br>
                         </div>
+
+                        <div className="col-md-6">
+                            <div style={{ flex: 1, paddingLeft: '2vw' }}>
+                                <ul style={{ fontSize: '1.5vw', lineHeight: 1.1 }}>
+                                    <li style={{ marginBottom: '1vw', textAlign: 'justify' }}>Flexible Loan Categories: Choose from a diverse range of loan categories tailored to meet your specific financial needs, including student loans, medical loans, mortgage loans, and standard loans.</li>
+                                    <li style={{ marginBottom: '1vw', textAlign: 'justify' }}>Streamlined Application Process: Enjoy a straightforward and hassle-free borrowing experience with our user-friendly application process, allowing you to submit your loan application quickly and easily.</li>
+                                    <li style={{ marginBottom: '1vw', textAlign: 'justify' }}>Competitive Interest Rates: Benefit from competitive interest rates tailored to each loan category, ensuring you can access funding at affordable rates.</li>
+                                    <li style={{ marginBottom: '1vw', textAlign: 'justify' }}>Dedicated Customer Support: Receive personalized assistance throughout your borrowing journey from our experienced customer support team, who are available to address any questions or concerns you may have.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
             </section>
@@ -257,7 +226,7 @@ export default function Home() {
 
             <section id="service">
                 <div className="container my-5 py-5">
-                    <div className="row" style={{ margin: '100px', marginTop: '0', marginBottom: '0'}}>
+                    <div className="row" style={{ margin: '100px', marginTop: '0', marginBottom: '0' }}>
                         <div className="col-12">
                             <h3 className="fs-5 text-left mb-0">Our Services </h3>
                             <h1 className="display-6 text-left mb-4">Why Choose Bitloanscapital?</h1>
@@ -265,7 +234,7 @@ export default function Home() {
                         </div>
                     </div>
 
-                    <div className="row mt-5" style={{ margin: '100px', marginTop: '0', marginBottom: '0'}}>
+                    <div className="row mt-5" style={{ margin: '100px', marginTop: '0', marginBottom: '0' }}>
                         <div className="col-md-4">
                             <a href='/lend' style={{ textDecoration: 'none' }}>
                                 <div className="card p-3 h-100">
@@ -289,11 +258,10 @@ export default function Home() {
                                     <h5 className="card-title text-center mb-3 fs-4 fw-bold">Borrowing
                                     </h5>
                                     <div className="card-body text-left">
-                                        <p className="card-text text-center lead" style={{ fontSize: '1.7vw' }}>At Bitloanscapital, we offer a diverse range of loan categories designed to meet the specific financial needs of our clients.
-                                            Whether you're a student in need of educational funding, require financial assistance for medical expenses, looking to finance
-                                            a mortgage, or simply need a standard loan, our comprehensive loan categories provide flexible and competitive options. With
-                                            attractive interest rates and collateral requirements, Bitloanscapital is the ideal choice for borrowers seeking efficient and
-                                            secure lending solutions.
+                                        <p className="card-text text-center lead" style={{ fontSize: '1.7vw' }}>At Bitloanscapital, we offer a diverse range of loan categories 
+                                            designed to meet the specific financial needs of our clients.
+                                            Whether you're a student in need of educational funding, medical expenses, or looking to finance
+                                            a mortgage, or simply need a standard loan, you are in the right place.
                                         </p>
                                     </div>
                                 </div>
@@ -316,9 +284,9 @@ export default function Home() {
                         </div>
                     </div>
 
-                    <div className="row" style={{ margin: '100px', marginTop: '0', marginBottom: '0'}}>
+                    <div className="row" style={{ margin: '100px', marginTop: '0', marginBottom: '0' }}>
                         <div className="col-12">
-                            <h1 className="display-6 text-left mb-4"><i className="fa fa-book me-2" style={{ color: '#07425b'  }}></i> Flexible Terms and Conditions</h1>
+                            <h1 className="display-6 text-left mb-4"><i className="fa fa-book me-2" style={{ color: '#07425b' }}></i> Flexible Terms and Conditions</h1>
                             <h3 className="display-8 text-left mb-4">Unlike automated crypto lending platforms, our terms and
                                 conditions are set by the company and frequently updated based on community feedback.
                                 This flexibility allows us to adapt and meet the evolving needs of our clients. We take
@@ -336,7 +304,7 @@ export default function Home() {
                         </div>
                     </div>
 
-                    <div className="row" style={{ margin: '100px', marginTop: '0', marginBottom: '0'}}>
+                    <div className="row" style={{ margin: '100px', marginTop: '0', marginBottom: '0' }}>
                         <div className="col-12">
                             <h1 className="display-6 text-left mb-4"><i className="fa fa-universal-access me-2" style={{ color: '#07425b' }}></i>Global Accessibility</h1>
                             <h3 className="display-8 text-left mb-4">Bitloanscapital operates fully online, eliminating the need for physical
@@ -362,7 +330,7 @@ export default function Home() {
             {/* Loan Categories */}
             <section id="loan">
                 <div className="container my-5 py-5">
-                    <div className="row" style={{ margin: '100px', marginTop: '0', marginBottom: '0'}}>
+                    <div className="row" style={{ margin: '100px', marginTop: '0', marginBottom: '0' }}>
                         <div className="col-12">
                             <h1 className="display-6 text-center mb-4">Our Loan Categories</h1>
 
