@@ -1,10 +1,6 @@
 import React from 'react'
 import {
-    MDBCol,
     MDBContainer,
-    MDBIcon,
-    MDBRow,
-    MDBTypography,
 } from "mdb-react-ui-kit";
 
 export default function How() {
@@ -100,10 +96,6 @@ export default function How() {
                             </div>
                         </div>
                     </section>
-
-
-
-
 
                     <section>
                     <div className="row" style={{ background: '#f5f5f5', margin: '100px', marginTop: '0', marginBottom: '0' }}>
