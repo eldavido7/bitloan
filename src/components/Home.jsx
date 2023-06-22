@@ -1,13 +1,4 @@
 import * as React from 'react';
-import Grid from '@mui/material/Grid';
-import FormLabel from '@mui/material/FormLabel';
-import FormControl from '@mui/material/FormControl';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import { Typography } from '@mui/material';
-import RadioGroup from '@mui/material/RadioGroup';
-import Radio from '@mui/material/Radio';
-import Paper from '@mui/material/Paper';
-
 
 export default function Home() {
 
@@ -195,6 +186,17 @@ export default function Home() {
                         </div>
 
                         <div className="col-md-6">
+                            <div style={{ flex: 1, paddingLeft: '2vw' }}>
+                                <ul style={{ fontSize: '1.5vw', lineHeight: 1.1 }}>
+                                    <li style={{ marginBottom: '1vw', textAlign: 'justify' }}>Flexible Loan Categories: Choose from a diverse range of loan categories tailored to meet your specific financial needs, including student loans, medical loans, mortgage loans, and standard loans.</li>
+                                    <li style={{ marginBottom: '1vw', textAlign: 'justify' }}>Streamlined Application Process: Enjoy a straightforward and hassle-free borrowing experience with our user-friendly application process, allowing you to submit your loan application quickly and easily.</li>
+                                    <li style={{ marginBottom: '1vw', textAlign: 'justify' }}>Competitive Interest Rates: Benefit from competitive interest rates tailored to each loan category, ensuring you can access funding at affordable rates.</li>
+                                    <li style={{ marginBottom: '1vw', textAlign: 'justify' }}>Dedicated Customer Support: Receive personalized assistance throughout your borrowing journey from our experienced customer support team, who are available to address any questions or concerns you may have.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div className="col-md-6">
                             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'white', fontFamily: 'Garamond, serif', color: '#07425b', padding: '3vw', boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)' }}>
                                 <div style={{ flex: 1, textAlign: 'center' }}>
                                     <h2 style={{ fontSize: '2.5vw', marginBottom: '0.5vw' }}>Loan rates from as low as</h2>
@@ -205,17 +207,6 @@ export default function Home() {
                             </div>
                             <br></br>
                             <br></br>
-                        </div>
-
-                        <div className="col-md-6">
-                            <div style={{ flex: 1, paddingLeft: '2vw' }}>
-                                <ul style={{ fontSize: '1.5vw', lineHeight: 1.1 }}>
-                                    <li style={{ marginBottom: '1vw', textAlign: 'justify' }}>Flexible Loan Categories: Choose from a diverse range of loan categories tailored to meet your specific financial needs, including student loans, medical loans, mortgage loans, and standard loans.</li>
-                                    <li style={{ marginBottom: '1vw', textAlign: 'justify' }}>Streamlined Application Process: Enjoy a straightforward and hassle-free borrowing experience with our user-friendly application process, allowing you to submit your loan application quickly and easily.</li>
-                                    <li style={{ marginBottom: '1vw', textAlign: 'justify' }}>Competitive Interest Rates: Benefit from competitive interest rates tailored to each loan category, ensuring you can access funding at affordable rates.</li>
-                                    <li style={{ marginBottom: '1vw', textAlign: 'justify' }}>Dedicated Customer Support: Receive personalized assistance throughout your borrowing journey from our experienced customer support team, who are available to address any questions or concerns you may have.</li>
-                                </ul>
-                            </div>
                         </div>
                         
                     </div>
@@ -273,7 +264,7 @@ export default function Home() {
 
             { /* extra paragraph services */}
             <section id='extra'>
-                <div className="container my-5 py-5" >
+                <div className="container my-5 py-5">
                     <div className="row" style={{ background: '#f5f5f5', margin: '100px', marginTop: '0', marginBottom: '0' }}>
                         <div className="col-12">
                             <h1 className="display-6 text-left mb-4"><i className="fa fa-arrow-left me-2" style={{ color: '#07425b' }}></i> Industry-Leading Returns</h1>
@@ -342,18 +333,19 @@ export default function Home() {
                         </div>
                     </div>
 
-                    <div className="row mt-5" style={{ margin: '100px' }}>
+                    <div className="row mt-5" style={{ margin: '100px', marginBottom: '0' }}>
                         <div className="col-md-4">
+                            <a href='/medical' style={{ textDecoration: 'none' }}>
                             <div className="card p-3 h-100">
                                 <div className="card-body text-center">
                                     <i className="fa fa-money fa-4x mb-4" style={{ color: '#07425b' }}></i>
                                     <h5 className="card-title mb-3 fs-4 fw-bold">Medical Loans
                                     </h5>
-                                    <p className="card-text lead" style={{ textAlign: 'justify' }}>Financial assistance for medical treatments, procedures, or healthcare-related expenses.
+                                    <p className="card-text lead" style={{ textAlign: 'left' }}>Financial assistance for medical treatments, procedures, or healthcare-related expenses.
                                     </p>
-
                                 </div>
                             </div>
+                            </a>
                         </div>
 
                         <div className="col-md-4">
@@ -375,7 +367,7 @@ export default function Home() {
                                     <i className="fa fa-btc fa-4x mb-4" style={{ color: '#07425b' }}></i>
                                     <h5 className="card-title mb-3 fs-4 fw-bold">Mortgage Loans
                                     </h5>
-                                    <p className="card-text lead" style={{ textAlign: 'justify' }}>Loans specifically designed for homebuyers or homeowners looking to refinance.
+                                    <p className="card-text lead" style={{ textAlign: 'left' }}>Loans specifically designed for homebuyers or homeowners looking to refinance.
                                     </p>
 
                                 </div>
@@ -391,7 +383,7 @@ export default function Home() {
                                     <i className="fa fa-bank fa-4x mb-4" style={{ color: '#07425b' }}></i>
                                     <h5 className="card-title mb-3 fs-4 fw-bold">Standard Loans
                                     </h5>
-                                    <p className="card-text lead" style={{ textAlign: 'justify' }}>General-purpose loans for various personal or business needs.
+                                    <p className="card-text lead" style={{ textAlign: 'left' }}>General-purpose loans for various personal or business needs.
                                     </p>
 
                                 </div>
