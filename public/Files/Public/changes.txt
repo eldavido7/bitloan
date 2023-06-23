@@ -1,0 +1,26 @@
+text at top of homepage changes
+14%PA compounded monthly (big text) above our services with information beside it
+our services - 2 cards; lending and borrowing, clickable cards
+things that are on services go in paragraphs with different backgrounds, primary and white
+left-indented centralize text and bigger margins
+contact us instead of request callback
+at the bottom of homepage, instead of buttons, put icons for social media pages
+clickable cards on homepage
+join us at the bottom, colored background
+
+
+borrowing page like dtb, side menu with each individual categories
+they should also have a header section with general info about the page
+
+
+on the about us page, at who are we, add sentence about meeting team and let it redirect to team page
+add dropdown menu with all website links
+careers page
+
+
+contact us changes to "talk to someone" - zoom, skype, email, phonecall.. all options will have different entries when selected. add section for date and time available. when phonecall is selected, show error message saying there's a high demand for calls instead of fields to enter. at the bottom of contact us page, add link to career page. on that page, entries for their information and also bitcoin address for them to pay $100 in crypto to apply.
+
+
+faq, terms and privacy heading under first text. indented to the left.
+faq questions should be hidden then click to see answers
+how it works in paragraphs and the icons on the side like pics in about us
