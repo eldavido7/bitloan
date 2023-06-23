@@ -1,6 +1,256 @@
-import * as React from 'react';
+import { React, useState } from 'react';
 
 export default function Home() {
+    const [loanCategory, setLoanCategory] = useState('');
+    const [loanType, setLoanType] = useState('');
+    const [loanAmount, setLoanAmount] = useState('');
+    const [monthlyRepayments, setMonthlyRepayments] = useState(null);
+    const [totalInterest, setTotalInterest] = useState(null);
+    const [loanPeriod, setLoanPeriod] = useState(0);
+    const [totalCollateral, setTotalCollateral] = useState(null);
+
+    const handleLoanCategoryChange = (event) => {
+        setLoanCategory(event.target.value);
+    };
+
+    const handleLoanTypeChange = (event) => {
+        setLoanType(event.target.value);
+    };
+
+    const handleLoanAmountChange = (event) => {
+        const value = event.target.value;
+        // Only allow positive numbers
+        if (value >= 0) {
+            setLoanAmount(value);
+        }
+    };
+
+    const calculateLoanDetails = () => {
+        if (!loanCategory || !loanType || !loanAmount) {
+            alert('Please select loan category, loan type, and enter loan amount.');
+            return;
+        }
+
+        // Validate loan amount
+        if (loanAmount < 0) {
+            alert('Loan amount must be a positive number.');
+            return;
+        }
+
+        let interestRate = 0;
+        let collateralRate = 0;
+        let loanPeriod = 0;
+
+        if (loanCategory === 'standard') {
+            if (loanAmount >= 0 && loanAmount <= 7999) {
+                loanPeriod = 0;
+            } else if (loanAmount >= 8000 && loanAmount <= 50000) {
+                loanPeriod = 2;
+            } else if (loanAmount >= 50000 && loanAmount <= 100000) {
+                loanPeriod = 2;
+            } else if (loanAmount >= 100000 && loanAmount <= 500000) {
+                loanPeriod = 3;
+            } else if (loanAmount >= 500000 && loanAmount <= 1000000) {
+                loanPeriod = 4;
+            } else if (loanAmount >= 1000000 && loanAmount <= 5000000) {
+                loanPeriod = 5;
+            } else if (loanAmount >= 5000000 && loanAmount <= 10000000) {
+                loanPeriod = 6;
+            } else if (loanAmount >= 10000000 && loanAmount <= 50000000) {
+                loanPeriod = 8;
+            } else if (loanAmount >= 50000000 && loanAmount <= 100000000) {
+                loanPeriod = 10;
+            }
+        } else if (loanCategory === 'mortgage') {
+            if (loanAmount >= 0 && loanAmount <= 99999) {
+                loanPeriod = 0;
+            } else if (loanAmount >= 100000 && loanAmount <= 500000) {
+                loanPeriod = 15;
+            } else if (loanAmount >= 500000 && loanAmount <= 1000000) {
+                loanPeriod = 15;
+            } else if (loanAmount >= 1000000 && loanAmount <= 5000000) {
+                loanPeriod = 20;
+            } else if (loanAmount >= 5000000 && loanAmount <= 10000000) {
+                loanPeriod = 20;
+            } else if (loanAmount >= 10000000 && loanAmount <= 50000000) {
+                loanPeriod = 20;
+            } else if (loanAmount >= 50000000 && loanAmount <= 100000000) {
+                loanPeriod = 30;
+            }
+        } else if (loanCategory === 'student') {
+            if (loanAmount >= 0 && loanAmount <= 7999) {
+                loanPeriod = 0;
+            } else if (loanAmount >= 8000 && loanAmount <= 50000) {
+                loanPeriod = 10;
+            } else if (loanAmount >= 50000 && loanAmount <= 100000) {
+                loanPeriod = 10;
+            } else if (loanAmount >= 100000 && loanAmount <= 500000) {
+                loanPeriod = 10;
+            }
+        } else if (loanCategory === 'medical') {
+            if (loanAmount >= 0 && loanAmount <= 7999) {
+                loanPeriod = 0;
+            } else if (loanAmount >= 8000 && loanAmount <= 50000) {
+                loanPeriod = 2;
+            } else if (loanAmount >= 50000 && loanAmount <= 100000) {
+                loanPeriod = 2;
+            } else if (loanAmount >= 100000 && loanAmount <= 500000) {
+                loanPeriod = 3;
+            } else if (loanAmount >= 500000 && loanAmount <= 1000000) {
+                loanPeriod = 4;
+            } else if (loanAmount >= 1000000 && loanAmount <= 5000000) {
+                loanPeriod = 5;
+            } else if (loanAmount >= 5000000 && loanAmount <= 10000000) {
+                loanPeriod = 6;
+            }
+        }
+        setLoanPeriod(loanPeriod);
+        // Calculate interest rate and collateral rate based on loan category and type
+        if (loanCategory === 'Student') {
+            // Student loans
+            if (loanAmount >= 0 && loanAmount <= 7999) {
+                collateralRate = 0;
+                interestRate = 0.045;
+                loanPeriod = 0;
+            } else if (loanAmount >= 8000 && loanAmount <= 50000) {
+                collateralRate = loanType === 'Normal' ? 8000 : 10000;
+                interestRate = 0.045;
+                loanPeriod = 10;
+            } else if (loanAmount > 50000 && loanAmount <= 100000) {
+                collateralRate = loanType === 'Normal' ? loanAmount * 0.15 : loanAmount * 0.2;
+                interestRate = 0.045;
+                loanPeriod = 10;
+            } else {
+                alert('Student loans over 100000 are not eligible to be collected.');
+                return;
+            }
+        } else if (loanCategory === 'Medical') {
+            // Medical loans
+            if (loanAmount >= 0 && loanAmount <= 7999) {
+                collateralRate = 0;
+                interestRate = 0.17;
+                loanPeriod = 0;
+            } else if (loanAmount >= 8000 && loanAmount <= 50000) {
+                collateralRate = loanType === 'Normal' ? 8000 : 10000;
+                interestRate = 0.17;
+                loanPeriod = 2;
+            } else if (loanAmount > 50000 && loanAmount <= 100000) {
+                collateralRate = loanType === 'Normal' ? loanAmount * 0.15 : loanAmount * 0.19;
+                interestRate = 0.17;
+                loanPeriod = 2;
+            } else if (loanAmount > 100000 && loanAmount <= 500000) {
+                collateralRate = loanType === 'Normal' ? loanAmount * 0.15 : loanAmount * 0.18;
+                interestRate = 0.16;
+                loanPeriod = 3;
+            } else if (loanAmount > 500000 && loanAmount <= 1000000) {
+                collateralRate = loanType === 'Normal' ? loanAmount * 0.15 : loanAmount * 0.18;
+                interestRate = 0.15;
+                loanPeriod = 4;
+            } else if (loanAmount > 1000000 && loanAmount <= 5000000) {
+                collateralRate = loanType === 'Normal' ? loanAmount * 0.13 : loanAmount * 0.16;
+                interestRate = 0.15;
+                loanPeriod = 5;
+            } else if (loanAmount > 5000000 && loanAmount <= 10000000) {
+                collateralRate = loanType === 'Normal' ? loanAmount * 0.12 : loanAmount * 0.16;
+                interestRate = 0.15;
+                loanPeriod = 6;
+            } else {
+                alert('Medical loans over 10000000 are not eligible to be collected.');
+                return;
+            }
+        } else if (loanCategory === 'Mortgage') {
+            // Mortgage loans
+            if (loanAmount >= 0 && loanAmount <= 99999) {
+                collateralRate = 0;
+                interestRate = 0.065;
+                loanPeriod = 0;
+            } else if (loanAmount >= 100000 && loanAmount <= 500000) {
+                collateralRate = loanType === 'Normal' ? loanAmount * 0.24 : loanAmount * 0.29;
+                interestRate = 0.065;
+                loanPeriod = 15;
+            } else if (loanAmount > 500000 && loanAmount <= 1000000) {
+                collateralRate = loanType === 'Normal' ? loanAmount * 0.24 : loanAmount * 0.29;
+                interestRate = 0.065;
+                loanPeriod = 15;
+            } else if (loanAmount > 1000000 && loanAmount <= 5000000) {
+                collateralRate = loanType === 'Normal' ? loanAmount * 0.22 : loanAmount * 0.27;
+                interestRate = 0.06;
+                loanPeriod = 20;
+            } else if (loanAmount > 5000000 && loanAmount <= 10000000) {
+                collateralRate = loanType === 'Normal' ? loanAmount * 0.22 : loanAmount * 0.26;
+                interestRate = 0.05;
+                loanPeriod = 20;
+            } else if (loanAmount > 10000000 && loanAmount <= 50000000) {
+                collateralRate = loanType === 'Normal' ? loanAmount * 0.2 : loanAmount * 0.26;
+                interestRate = 0.045;
+                loanPeriod = 20;
+            } else if (loanAmount > 50000000 && loanAmount <= 100000000) {
+                collateralRate = loanType === 'Normal' ? loanAmount * 0.2 : loanAmount * 0.25;
+                interestRate = 0.045;
+                loanPeriod = 30;
+            }
+        } else if (loanCategory === 'Standard') {
+            // Standard loans
+            if (loanAmount >= 0 && loanAmount <= 7999) {
+                collateralRate = 0;
+                interestRate = 0.18;
+                loanPeriod = 0;
+            } else if (loanAmount >= 8000 && loanAmount <= 50000) {
+                collateralRate = loanType === 'Normal' ? 8000 : 10000;
+                interestRate = 0.18;
+                loanPeriod = 2;
+            } else if (loanAmount > 50000 && loanAmount <= 100000) {
+                collateralRate = loanType === 'Normal' ? loanAmount * 0.16 : loanAmount * 0.2;
+                interestRate = 0.18;
+                loanPeriod = 2;
+            } else if (loanAmount > 100000 && loanAmount <= 500000) {
+                collateralRate = loanType === 'Normal' ? loanAmount * 0.155 : loanAmount * 0.2;
+                interestRate = 0.18;
+                loanPeriod = 3;
+            } else if (loanAmount > 500000 && loanAmount <= 1000000) {
+                collateralRate = loanType === 'Normal' ? loanAmount * 0.15 : loanAmount * 0.19;
+                interestRate = 0.17;
+                loanPeriod = 4;
+            } else if (loanAmount > 1000000 && loanAmount <= 5000000) {
+                collateralRate = loanType === 'Normal' ? loanAmount * 0.13 : loanAmount * 0.18;
+                interestRate = 0.16;
+                loanPeriod = 5;
+            } else if (loanAmount > 5000000 && loanAmount <= 10000000) {
+                collateralRate = loanType === 'Normal' ? loanAmount * 0.12 : loanAmount * 0.17;
+                interestRate = 0.16;
+                loanPeriod = 6;
+            } else if (loanAmount > 10000000 && loanAmount <= 50000000) {
+                collateralRate = loanType === 'Normal' ? loanAmount * 0.11 : loanAmount * 0.16;
+                interestRate = 0.15;
+                loanPeriod = 8;
+            } else if (loanAmount > 50000000 && loanAmount <= 100000000) {
+                collateralRate = loanType === 'Normal' ? loanAmount * 0.1 : loanAmount * 0.16;
+                interestRate = 0.15;
+                loanPeriod = 10;
+            }
+        }
+
+        // Calculate monthly repayments, total interest, and total collateral
+        const months = loanCategory === 'Mortgage' ? 180 : loanCategory === 'Student' ? 120 : 36;
+        const monthlyInterestRate = interestRate / 12;
+        const monthlyRepayment =
+            (loanAmount * monthlyInterestRate) /
+            (1 - Math.pow(1 + monthlyInterestRate, -months));
+        const totalInterestAmount = monthlyRepayment * months - loanAmount;
+        const totalCollateralAmount = collateralRate;
+        const totalLoanPeriod = loanPeriod;
+
+        setMonthlyRepayments(monthlyRepayment.toFixed(2));
+        setTotalInterest(totalInterestAmount.toFixed(2));
+        setTotalCollateral(totalCollateralAmount.toFixed(2));
+        setLoanPeriod(totalLoanPeriod.toFixed(2));
+    };
+
+    const [errorMessage, setErrorMessage] = useState('');
+
+    const handleCloseError = () => {
+        setErrorMessage('');
+    };
 
     return (
         <div>
@@ -208,7 +458,7 @@ export default function Home() {
                             <br></br>
                             <br></br>
                         </div>
-                        
+
                     </div>
                 </div>
             </section>
@@ -249,7 +499,7 @@ export default function Home() {
                                     <h5 className="card-title text-center mb-3 fs-4 fw-bold">Borrowing
                                     </h5>
                                     <div className="card-body text-left">
-                                        <p className="card-text text-center lead" style={{ fontSize: '1.7vw' }}>At Bitloanscapital, we offer a diverse range of loan categories 
+                                        <p className="card-text text-center lead" style={{ fontSize: '1.7vw' }}>At Bitloanscapital, we offer a diverse range of loan categories
                                             designed to meet the specific financial needs of our clients.
                                             Whether you're a student in need of educational funding, medical expenses, or looking to finance
                                             a mortgage, or simply need a standard loan, you are in the right place.
@@ -336,43 +586,43 @@ export default function Home() {
                     <div className="row mt-5" style={{ margin: '100px', marginBottom: '0' }}>
                         <div className="col-md-4">
                             <a href='/medical' style={{ textDecoration: 'none' }}>
-                            <div className="card p-3 h-100">
-                                <div className="card-body text-center">
-                                    <i className="fa fa-money fa-4x mb-4" style={{ color: '#07425b' }}></i>
-                                    <h5 className="card-title mb-3 fs-4 fw-bold">Medical Loans
-                                    </h5>
-                                    <p className="card-text lead" style={{ textAlign: 'left' }}>Financial assistance for medical treatments, procedures, or healthcare-related expenses.
-                                    </p>
+                                <div className="card p-3 h-100">
+                                    <div className="card-body text-center">
+                                        <i className="fa fa-money fa-4x mb-4" style={{ color: '#07425b' }}></i>
+                                        <h5 className="card-title mb-3 fs-4 fw-bold">Medical Loans
+                                        </h5>
+                                        <p className="card-text lead" style={{ textAlign: 'left' }}>Financial assistance for medical treatments, procedures, or healthcare-related expenses.
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
                             </a>
                         </div>
 
                         <div className="col-md-4">
-                        <a href='/borrow' style={{ textDecoration: 'none' }}>
-                            <div className="card p-3 h-100">
-                                <div className="card-body text-center">
-                                    <i className="fa fa-dollar fa-4x mb-4" style={{ color: '#07425b' }}></i>
-                                    <h5 className="card-title mb-3 fs-4 fw-bold">Student Loans
-                                    </h5>
-                                    <p className="card-text lead" style={{ textAlign: 'justify' }}>Funding for educational expenses to support your academic journey.
-                                    </p>
+                            <a href='/borrow' style={{ textDecoration: 'none' }}>
+                                <div className="card p-3 h-100">
+                                    <div className="card-body text-center">
+                                        <i className="fa fa-dollar fa-4x mb-4" style={{ color: '#07425b' }}></i>
+                                        <h5 className="card-title mb-3 fs-4 fw-bold">Student Loans
+                                        </h5>
+                                        <p className="card-text lead" style={{ textAlign: 'justify' }}>Funding for educational expenses to support your academic journey.
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
                             </a>
                         </div>
 
                         <div className="col-md-4">
-                        <a href='/mortgage' style={{ textDecoration: 'none' }}>
-                            <div className="card p-3 h-100">
-                                <div className="card-body text-center">
-                                    <i className="fa fa-btc fa-4x mb-4" style={{ color: '#07425b' }}></i>
-                                    <h5 className="card-title mb-3 fs-4 fw-bold">Mortgage Loans
-                                    </h5>
-                                    <p className="card-text lead" style={{ textAlign: 'left' }}>Loans specifically designed for homebuyers or homeowners looking to refinance.
-                                    </p>
+                            <a href='/mortgage' style={{ textDecoration: 'none' }}>
+                                <div className="card p-3 h-100">
+                                    <div className="card-body text-center">
+                                        <i className="fa fa-btc fa-4x mb-4" style={{ color: '#07425b' }}></i>
+                                        <h5 className="card-title mb-3 fs-4 fw-bold">Mortgage Loans
+                                        </h5>
+                                        <p className="card-text lead" style={{ textAlign: 'left' }}>Loans specifically designed for homebuyers or homeowners looking to refinance.
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
                             </a>
                         </div>
 
@@ -380,22 +630,80 @@ export default function Home() {
 
                     <div className="row mt-5" style={{ margin: '100px', marginTop: '0', marginBottom: '0' }}>
                         <div className="col-md-4">
-                        <a href='/standard' style={{ textDecoration: 'none' }}>
-                            <div className="card p-3 h-100">
-                                <div className="card-body text-center">
-                                    <i className="fa fa-bank fa-4x mb-4" style={{ color: '#07425b' }}></i>
-                                    <h5 className="card-title mb-3 fs-4 fw-bold">Standard Loans
-                                    </h5>
-                                    <p className="card-text lead" style={{ textAlign: 'left' }}>General-purpose loans for various personal or business needs.
-                                    </p>
+                            <a href='/standard' style={{ textDecoration: 'none' }}>
+                                <div className="card p-3 h-100">
+                                    <div className="card-body text-center">
+                                        <i className="fa fa-bank fa-4x mb-4" style={{ color: '#07425b' }}></i>
+                                        <h5 className="card-title mb-3 fs-4 fw-bold">Standard Loans
+                                        </h5>
+                                        <p className="card-text lead" style={{ textAlign: 'left' }}>General-purpose loans for various personal or business needs.
+                                        </p>
 
+                                    </div>
                                 </div>
-                            </div>
                             </a>
                         </div>
                     </div>
 
                 </div>
+            </section>
+
+            <section id='loancalc'>
+
+                <div className="loan-calculator">
+                    <h2>Loan Calculator</h2>
+                    <div className="form-group">
+                        <label htmlFor="loan-category">Loan Category:</label>
+                        <select
+                            id="loan-category"
+                            value={loanCategory}
+                            onChange={handleLoanCategoryChange}
+                        >
+                            <option value="">Select</option>
+                            <option value="Standard">Standard Loan</option>
+                            <option value="Mortgage">Mortgage Loan</option>
+                            <option value="Student">Student Loan</option>
+                            <option value="Medical">Medical Loan</option>
+                        </select>
+                    </div>
+
+                    <div className="form-group">
+                        <label htmlFor="loan-type">Loan Type:</label>
+                        <select id="loan-type" value={loanType} onChange={handleLoanTypeChange}>
+                            <option value="">Select</option>
+                            <option value="Normal">Normal Loan</option>
+                            <option value="Emergency">Emergency Loan</option>
+                        </select>
+                    </div>
+
+                    <div className="form-group">
+                        <label htmlFor="loan-amount">Loan Amount:</label>
+                        <input
+                            id="loan-amount"
+                            type="number"
+                            value={loanAmount}
+                            onChange={handleLoanAmountChange}
+                            placeholder="Enter loan amount"
+                        />
+                    </div>
+
+                    <button className='button1' onClick={calculateLoanDetails}>Calculate</button>
+                    <div className="alert">{errorMessage}</div>
+                    {monthlyRepayments > 0 && (
+                        <div className="result">
+                            <h3>Loan Results:</h3>
+                            <p>Monthly Payment: ${monthlyRepayments}</p>
+                            <p>Total Interest: ${totalInterest}</p>
+                            {loanAmount >= 8000 && (
+                                <p>Collateral: ${totalCollateral}</p>
+                            )}
+                            {loanPeriod > 0 && (
+                                <p>Loan Period (months): {loanPeriod * 12}</p>
+                            )}
+                        </div>
+                    )}
+                </div>
+
             </section>
 
             <section id="end">
